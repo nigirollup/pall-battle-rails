@@ -1,0 +1,4 @@
+<%= simple_form_for [poll, review], remote: true do |f| %>
+  <%= f.input :content, label: "", placeholder: "Write something here" %>
+  <%= f.submit "Add comment", class: "btn btn-review" %>
+ <% end %>

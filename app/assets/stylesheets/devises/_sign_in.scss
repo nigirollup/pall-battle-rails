@@ -1,0 +1,33 @@
+
+.block {
+  display: flex;
+  color: $color4;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    display: flex;
+    padding: 30px 20px;
+    color: $color4;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.shared_log {
+  display: flex;
+  color: $color4;
+  align-items: center;
+  justify-content: center;
+  border-color: $color2;
+  -webkit-transition: 0.5s;
+  margin: auto;
+  padding: 0;
+  background: none;
+  border: none;
+  width: 250px;
+}
+
+#new_user input {
+  width: 250px;
+}

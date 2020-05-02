@@ -1,0 +1,19 @@
+<div class="head" style="height: 100%">
+  <h2>
+  <% if user_signed_in? %>
+    <% if review.user.facebook_picture_url? %>
+      <%= cl_image_tag review.user.facebook_picture_url %>
+    <% elsif review.user.picture? %>
+      <%= cl_image_tag review.user.picture.path %>
+    <% else %>
+      <%= image_tag "http://betterpropertiesauburn.com/wp-content/uploads/2015/11/ad516503a11cd5ca435acc9bb6523536-1.png" %>
+    <% end %>
+  <% else %>
+    <%= image_tag "http://betterpropertiesauburn.com/wp-content/uploads/2015/11/ad516503a11cd5ca435acc9bb6523536-1.png" %>
+  <% end %>
+  </h2>
+  <p><%= review.user.username %></p>
+  <div class="review-content-and-date">
+    <h4><b>"<%= review.content %>"</b></br> <p class="review-date"><em>Posted : at <%= review.created_at.strftime("%I:%M %p on %B %d") %></em></p></h4>
+  </div>
+</div>
